@@ -6,7 +6,7 @@ In this hands-on lab, you'll explore different encryption methods and understand
 ## Estimated Time: 10-15 minutes
 
 ## Prerequisites
-- Linux-based system (Kali Linux recommended)
+- Any Linux-based system or WSL (Windows-Subsytem-for-Linux)
 - Python 3.6 or higher
 - Basic knowledge of terminal commands
 
