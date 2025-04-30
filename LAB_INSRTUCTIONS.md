@@ -3,7 +3,7 @@
 ## Lab Overview
 In this hands-on lab, you'll explore different encryption methods and understand their strengths, weaknesses, and appropriate uses. You'll be working with the Globomantics security team to evaluate encryption options for protecting sensitive communications.
 
-## Estimated Time: 10-15 minutes
+## Estimated Time: 25-30 minutes
 
 ## Prerequisites
 - Any Linux-based system or WSL (Windows-Subsytem-for-Linux)
