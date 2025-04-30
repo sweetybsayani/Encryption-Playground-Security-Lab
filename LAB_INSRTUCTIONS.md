@@ -123,20 +123,7 @@ In this hands-on lab, you'll explore different encryption methods and understand
 
 5. Exit the program by selecting option 8
 
-### Part 6: Complete the Evaluation Worksheet (2 minutes)
-
-1. **YOUR TASK**: Complete the encryption evaluation worksheet:
-   ```bash
-   nano encryption_evaluation.txt
-   ```
-
-2. Fill in your observations about the strengths and weaknesses of each encryption method
-
-3. Make recommendations for which encryption methods would be appropriate for different types of data
-
-4. Save the file (Ctrl+O, then Enter, then Ctrl+X)
-
-### Part 7: Test Your Knowledge (Optional)
+### Part 6: Test Your Knowledge (Optional)
 
 1. **YOUR TASK**: Try the decryption challenges:
    ```bash
@@ -145,7 +132,7 @@ In this hands-on lab, you'll explore different encryption methods and understand
 
 2. Apply what you've learned to solve the encryption puzzles
 
-### Part 8: Lab Cleanup (1 minute)
+### Part 7: Lab Cleanup (1 minute)
 
 1. Reset the lab environment:
    ```bash
