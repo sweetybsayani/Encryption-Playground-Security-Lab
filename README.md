@@ -33,7 +33,7 @@ In this lab, you will:
 1. Clone this repository:
    ```bash
    git clone https://github.com/sweetybsayani/Encryption-Playground-Security-Lab.git
-   cd encryption-playground
+   cd Encryption-Playground-Security-Lab
    ```
 
 2. Run the setup script:
