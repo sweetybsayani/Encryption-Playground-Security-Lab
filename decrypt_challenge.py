@@ -61,10 +61,15 @@ def challenge_1():
             
             print(f"Result: {decrypted}")
             
-            check = input("Is this correct? (y/n): ").lower()
-            if check == 'y':
+            # The correct answer is with shift=7, producing "HELLO WORLD IS A CAESAR CIPHER"
+            if "HELLO WORLD" in decrypted:
                 print(Fore.GREEN + "\nCorrect! You've solved Challenge 1." + Style.RESET_ALL)
                 return True
+            else:
+                check = input("Is this correct? (y/n): ").lower()
+                if check == 'y':
+                    print(Fore.GREEN + "\nCorrect! You've solved Challenge 1." + Style.RESET_ALL)
+                    return True
                 
         except ValueError:
             print(Fore.RED + "Please enter a valid number." + Style.RESET_ALL)
@@ -103,10 +108,15 @@ def challenge_2():
         
         print(f"Result: {decrypted}")
         
-        check = input("Is this correct? (y/n): ").lower()
-        if check == 'y':
+        # The correct key is "KEY", producing "secret xor message found!"
+        if "secret" in decrypted.lower() and "message" in decrypted.lower():
             print(Fore.GREEN + "\nCorrect! You've solved Challenge 2." + Style.RESET_ALL)
             return True
+        else:
+            check = input("Is this correct? (y/n): ").lower()
+            if check == 'y':
+                print(Fore.GREEN + "\nCorrect! You've solved Challenge 2." + Style.RESET_ALL)
+                return True
 
 def challenge_3():
     """AES decryption challenge"""
@@ -127,6 +137,7 @@ def challenge_3():
     print(f"Mode: {encrypted_data['mode']}")
     
     print("\nThe key (in hex) is: 476c6f626f6d616e74696373536563726574")
+    print("Hint: You may need to adjust the key to a valid AES key length (16, 24, or 32 bytes)")
     
     from Crypto.Cipher import AES
     from Crypto.Util.Padding import unpad
@@ -141,9 +152,10 @@ def challenge_3():
             elif choice != 'y':
                 continue
             
-            # Convert key from hex
+            # Convert key from hex - truncate to 16 bytes (128 bits) for AES-128
             key_hex = "476c6f626f6d616e74696373536563726574"
-            key = bytes.fromhex(key_hex)
+            # Use first 32 hex chars (16 bytes)
+            key = bytes.fromhex(key_hex[:32])
             
             # Get IV and ciphertext
             iv = base64.b64decode(encrypted_data['iv'])
@@ -156,13 +168,16 @@ def challenge_3():
             decrypted = plaintext.decode('utf-8')
             print(f"\nDecrypted message: {decrypted}")
             
-            check = input("Have you successfully decrypted the message? (y/n): ").lower()
-            if check == 'y':
+            # The correct decryption should reveal a flag or secret message
+            if "flag" in decrypted.lower() or "secret" in decrypted.lower() or "globomantics" in decrypted.lower():
                 print(Fore.GREEN + "\nCorrect! You've solved Challenge 3." + Style.RESET_ALL)
                 return True
+            else:
+                print(Fore.YELLOW + "\nThat doesn't look right. Try again!" + Style.RESET_ALL)
                 
         except Exception as e:
             print(Fore.RED + f"Decryption error: {str(e)}" + Style.RESET_ALL)
+            print("Hint: Try truncating the key to exactly 16 bytes (first 32 hex characters).")
 
 def main():
     """Main function for the decryption challenges"""
