@@ -32,7 +32,7 @@ In this lab, you will:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/sweetybsayani/encryption-playground.git
+   git clone https://github.com/sweetybsayani/Encryption-Playground-Security-Lab.git
    cd encryption-playground
    ```
 
