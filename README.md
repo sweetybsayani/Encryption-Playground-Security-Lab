@@ -16,7 +16,6 @@ In this lab, you will:
 2. Learn about different encryption algorithms
 3. Encrypt and decrypt messages using various methods
 4. Compare the security of different encryption approaches
-5. Make recommendations based on your findings
 
 ## Lab Network
 ![network-diagram-encryption (1)](https://github.com/user-attachments/assets/3061194c-bf20-49a0-9fda-d9c1b10cf0fa)
