@@ -126,13 +126,47 @@ def verify_signature(message, encoded_signature, public_key):
     except (ValueError, TypeError):
         return False
 
+def compare_encryption_types():
+    """Compare symmetric and asymmetric encryption"""
+    print(Fore.GREEN + "\nSYMMETRIC VS ASYMMETRIC ENCRYPTION" + Style.RESET_ALL)
+    print("Let's compare the two main types of encryption:\n")
+    
+    print("SYMMETRIC ENCRYPTION:")
+    print("- Uses the same key for encryption and decryption")
+    print("- Examples: AES, 3DES, Blowfish")
+    print("- Advantages: Fast, efficient for large data")
+    print("- Disadvantages: Key distribution problem - how to securely share the key?")
+    print("- Use cases: Encrypting files, database fields, secure communications after key exchange")
+    
+    print("\nASYMMETRIC ENCRYPTION (PUBLIC KEY):")
+    print("- Uses different keys for encryption and decryption")
+    print("- Examples: RSA, ECC, DSA")
+    print("- Advantages: Solves key distribution problem, provides digital signatures")
+    print("- Disadvantages: Much slower than symmetric, limited data size")
+    print("- Use cases: Key exchange, digital signatures, secure initial communications")
+    
+    print("\nIN PRACTICE:")
+    print("Most systems use a hybrid approach:")
+    print("1. Use asymmetric encryption to securely exchange a symmetric key")
+    print("2. Use the symmetric key for bulk data encryption")
+    print("3. Use asymmetric encryption for digital signatures")
+    print("Example: This is how HTTPS (TLS) works for secure websites")
+
 def visual_representation():
     """Show a visual representation of the public key encryption process"""
     print(Fore.GREEN + "\nRSA ENCRYPTION VISUAL REPRESENTATION" + Style.RESET_ALL)
     print("Here's a simplified visualization of how RSA works:\n")
     
     print("1. Key Generation:")
-    print("   ┌─────────────────┐")
+    print("   ┌─────────────┐    ┌──────────────┐    ┌──────────────┐
+   │   Message   │ → →│ PRIVATE KEY  │→ → │   Signature  │
+   │     M       │    │   (d, n)     │    │              │
+   └─────────────┘    └──────────────┘    └───────┬──────┘
+                                                  │
+   ┌─────────────┐    ┌──────────────┐           │
+   │  Verified?  │← ← │  PUBLIC KEY  │← ← ← ← ← ← ┘
+   │  (Yes/No)   │    │  (e, n)      │
+   └─────────────┘    └──────────────┘────────────┐")
     print("   │ Generate Primes │")
     print("   │    p and q      │")
     print("   └────────┬────────┘")
