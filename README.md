@@ -80,14 +80,6 @@ In this lab, you will:
 3. Decrypt the message using the private key
 4. Understand the difference between symmetric and asymmetric encryption
 
-### Task 5: Evaluate Encryption Methods
-1. Compare the results from the previous exercises
-2. **YOUR TASK**: Complete the encryption evaluation worksheet:
-   ```bash
-   nano encryption_evaluation.txt
-   ```
-3. Make recommendations for which encryption methods would be appropriate for different types of data
-
 ## Reset the Lab
 
 To reset the lab environment to its initial state:
